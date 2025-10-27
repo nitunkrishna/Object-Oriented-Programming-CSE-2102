@@ -1,5 +1,3 @@
-// 12 October, 2025
-
 #include<iostream>
 #include<cstring>
 
