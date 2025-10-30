@@ -1,7 +1,7 @@
 # CSE-2102-Class-Codes
 Course Teacher: Professor Dr. Md. Sazzad Hossain Sir
 
-Departmet of Computer Science and Engineering,
+Department of Computer Science and Engineering,
 
 Mawlana Bhashani Science and Technology University.
 
