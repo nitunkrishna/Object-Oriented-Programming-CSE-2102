@@ -1,0 +1,15 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main()
+{
+    int n=2345;
+    cout << "Using Default SETW : " << setw(10) << n << endl;
+    cout << "Using Left SETW    : " << left << setw(10) << n << endl;
+    cout << "Using Right SETW   : " << right << setw(10) << n << endl;
+    cout << "Using Internal SETW: " << internal << setw(10) << n << endl;
+    cout << "Using SETPRECISION : " << setprecision(3) << 2.345678 << endl;
+    cout << "Using SETFILL      : " << setfill('*') << setw(10) << n << endl;
+}
