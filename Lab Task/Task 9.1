@@ -1,0 +1,73 @@
+#include<iostream>
+#include<cstring>
+#include<string>
+
+using namespace std;
+
+class student
+{
+    int id;
+    string name;
+public:
+    student(int roll, string stu)
+    {
+        id=roll;
+        name=stu;
+    }
+    void output()
+    {
+        cout << "Student Id: " << id << endl;
+        cout << "Student name: " << name << endl;
+    }
+};
+
+class exam : public student
+{
+    int marks;
+public:
+    exam(int roll, string stu, int m) : student(roll, stu)
+    {
+        marks=m;
+    }
+    void output()
+    {
+        student :: output();
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+class result : public exam
+{
+    float cgpa;
+public:
+    result(int roll, string stu, int m, float cg) : exam(roll, stu, m)
+    {
+        cgpa=cg;
+    }
+    void output()
+    {
+        exam :: output();
+        cout << "CGPA: " << cgpa << endl;
+    }
+};
+
+int main()
+{
+    // int id, marks;
+    // string name;
+    // float cgpa;
+    // cout << "Enter Student ID: ";
+    // cin >> id;
+    // cout << "Enter Student Name: ";
+    // getline(cin, name);
+    // cin.ignore();
+    // cout << "Enter Marks: ";
+    // cin >> marks;
+    // cout << "Enter CGPA: ";
+    // cin >> cgpa;
+    // result ob(id, name, marks, cgpa);
+
+    result ob(24049, "Nitun Krishna Biswas", 49, 3.68);
+    ob.output();
+    return 0;
+}
