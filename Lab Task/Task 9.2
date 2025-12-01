@@ -1,0 +1,78 @@
+#include<iostream>
+
+using namespace std;
+
+class shape
+{
+public:
+    virtual void draw()=0;
+    virtual double area()=0;
+};
+
+class circle : public shape
+{
+    double r;
+public:
+    circle(double r) : r(r){}
+    void draw()
+    {
+        cout << "Drawing Circle: " << endl;
+    }
+    double area()
+    {
+        double res=3.1416*r*r;
+        cout << "Area of Circle= " << res << endl;
+        return res;
+    }
+};
+
+class rectangle : public shape
+{
+    double len, wid;
+public:
+    rectangle(double len, double wid) : len(len), wid(wid){}
+    void draw()
+    {
+        cout << "Drawing Rectangle: " << endl;
+    }
+    double area()
+    {
+        double res=len*wid;
+        cout << "Area of Rectangle= " << res << endl;
+        return res;
+    }
+};
+
+class square : public shape
+{
+    double len;
+public:
+    square(double len) : len (len){}
+    void draw()
+    {
+        cout << "Drawing Square: " << endl;
+    }
+    double area()
+    {
+        double res=len*len;
+        cout << "Area of Square= " << res << endl;
+        return res;
+    }
+};
+
+int main()
+{
+    shape *ob[3];
+    circle c(15);
+    rectangle r(5, 6);
+    square s(5);
+    ob[0]=&c;
+    ob[1]=&r;
+    ob[2]=&s;
+    for(int i=0; i<3; i++)
+    {
+        ob[i]->draw();
+        ob[i]->area();
+    }
+    return 0;
+}
