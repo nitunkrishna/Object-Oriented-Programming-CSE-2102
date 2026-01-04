@@ -45,9 +45,9 @@ int main()
 
     if(s1==s2)
         cout << "Two strings are equal." << endl;
-    else if(s1>=s2)
+    else if(s1>s2)
         cout << "1st string is greater than 2nd string." << endl;
-    else if(s1<=s2)
+    else if(s1<s2)
         cout << "2nd string is greater than 1st string." << endl;
 
     cout << "Concatenation of both strings: ";
