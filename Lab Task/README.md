@@ -1,9 +1,7 @@
 TASK 8: Write a program to overload +, ==, <= and >= operators for string operation <br>
-
 Input: abc, def <br>
 Output: After comparing two strings— <br>
 	2nd string is greater than 1st. <br>
-
 Input: def, def <br>
 Output: After comparing two strings— <br>
 	Two strings are equal. <br> <br>
